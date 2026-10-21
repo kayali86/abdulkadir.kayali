@@ -1,13 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
+    <title>Abdulkadir Kayali - Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>Hello, World!</h1>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <span class="logo">Abdulkadir Kayali</span>
+            <nav>
+                <a href="#about" class="nav-de">Über mich</a><a href="#about" class="nav-en" style="display:none;">About</a>
+                <a href="#experience" class="nav-de">Berufserfahrung</a><a href="#experience" class="nav-en" style="display:none;">Experience</a>
+                <a href="#skills" class="nav-de">Kenntnisse</a><a href="#skills" class="nav-en" style="display:none;">Skills</a>
+                <a href="#contact" class="nav-de">Kontakt</a><a href="#contact" class="nav-en" style="display:none;">Contact</a>
+            </nav>
+            <div class="lang-switch">
+                <button onclick="setLanguage('de')" id="btn-de" class="active">DE</button>
+                <button onclick="setLanguage('en')" id="btn-en">EN</button>
+            </div>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 class="lang-de">Hi, ich bin Abdulkadir Kayali</h1>
+            <h1 class="lang-en" style="display:none;">Hi, I'm Abdulkadir Kayali</h1>
+            
+            <p class="subtitle lang-de">Software Developer bei moviniti GmbH in Frankfurt am Main.</p>
+            <p class="subtitle lang-en" style="display:none;">Software Developer at moviniti GmbH in Frankfurt, Germany.</p>
+            
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary lang-de">Kontakt aufnehmen</a>
+                <a href="#contact" class="btn primary lang-en" style="display:none;">Get in Touch</a>
+                <a href="https://www.linkedin.com/in/abdulkadir-kayali-905862155" target="_blank" class="btn secondary">LinkedIn Profil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="lang-de">Über mich</h2>
+            <h2 class="lang-en" style="display:none;">About Me</h2>
+            <p class="lang-de">Ich bin ein leidenschaftlicher Softwareentwickler mit langjähriger praktischer Erfahrung in der Konzeption und Umsetzung von Softwarelösungen. Mein Fokus liegt auf mobilen Anwendungen, Cloud-Architekturen und robusten Backend-Systemen. Neben meiner Arbeit in Frankfurt spreche ich fließend Deutsch, Englisch und Arabisch.</p>
+            <p class="lang-en" style="display:none;">I am a passionate software developer with years of hands-on experience in designing and building software solutions. My focus lies on mobile applications, cloud architectures, and robust backend systems. Based in Frankfurt, I am fluent in German, English, and Arabic.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="lang-de">Berufserfahrung</h2>
+            <h2 class="lang-en" style="display:none;">Professional Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>moviniti GmbH</h3>
+                    <span class="role lang-de">Software Developer (Dezember 2020 – Heute · ca. 5 Jahre 11 Monate)</span>
+                    <span class="role lang-en" style="display:none;">Software Developer (December 2020 – Present · ~5 yrs 11 mos)</span>
+                    <p class="lang-de">Entwicklung einer mobilen App für MDE-Geräte in der Logistik sowie einer cloudbasierten Lösung mit C#.NET in Frankfurt am Main.</p>
+                    <p class="lang-en" style="display:none;">Developing a mobile app for mobile data collection (MDE) devices in logistics, along with a cloud-based solution using C#.NET in Frankfurt, Germany.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>moviniti GmbH</h3>
+                    <span class="role lang-de">Junior Mobile Developer (Mai 2019 – Dezember 2020 · 1 Jahr 8 Monate)</span>
+                    <span class="role lang-en" style="display:none;">Junior Mobile Developer (May 2019 – December 2020 · 1 yr 8 mos)</span>
+                    <p class="lang-de">Entwicklung von Android-Apps für MDE-Geräte mit Schwerpunkten in Transportlogistik, Warehousing, Werkslogistik und Sequenzierung.</p>
+                    <p class="lang-en" style="display:none;">Developing Android apps for MDE devices focusing on transport logistics, warehousing, plant logistics, and sequencing.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Swiss Commerce</h3>
+                    <span class="role lang-de">Junior Android Developer (Oktober 2018 – März 2019 · 6 Monate)</span>
+                    <span class="role lang-en" style="display:none;">Junior Android Developer (October 2018 – March 2019 · 6 mos)</span>
+                    <p class="lang-de">Android Development in Gießen, Hessen.</p>
+                    <p class="lang-en" style="display:none;">Android development in Gießen, Hesse.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Udacity</h3>
+                    <span class="role lang-de">Android Development Trainee (Juli 2018 – September 2018 · 3 Monate)</span>
+                    <span class="role lang-en" style="display:none;">Android Development Trainee (July 2018 – September 2018 · 3 mos)</span>
+                    <p class="lang-de">Intensive Weiterbildung im Bereich Android Development.</p>
+                    <p class="lang-en" style="display:none;">Intensive training in Android development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="lang-de">Kenntnisse & Zertifizierungen</h2>
+            <h2 class="lang-en" style="display:none;">Skills & Certifications</h2>
+            
+            <div class="skills-grid">
+                <div class="card">
+                    <h3 class="lang-de">Top-Kenntnisse</h3>
+                    <h3 class="lang-en" style="display:none;">Top Skills</h3>
+            <ul>
+                        <li>C#.NET / Cloudbasierte Lösungen</li>
+                        <li>Android Development (Kotlin / Java)</li>
+                        <li>MDE-Geräte & Logistik-Apps</li>
+                        <li>Transportlogistik, Warehousing & Sequenzierung</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="lang-de">Zertifizierungen</h3>
+                    <h3 class="lang-en" style="display:none;">Certifications</h3>
+                    <ul>
+                        <li>Real World ASP.NET Web API Services for .NET Framework</li>
+                        <li>Android Basics Nanodegree by Google</li>
+                        <li>Complete Kotlin Design Patterns Masterclass</li>
+                        <li>Android Unit Testing & Test Driven Development</li>
+                        <li>Kotlin for Java Developers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="lang-de">Lass uns in Verbindung treten</h2>
+            <h2 class="lang-en" style="display:none;">Let's Connect</h2>
+            <p class="lang-de">Schreib mir gerne eine E-Mail oder vernetze dich mit mir auf LinkedIn.</p>
+            <p class="lang-en" style="display:none;">Feel free to drop me an email or connect with me on LinkedIn.</p>
+            <a href="mailto:kayali.tech@gmail.com" class="btn primary">kayali.tech@gmail.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Abdulkadir Kayali. <span class="lang-de">Alle Rechte vorbehalten.</span><span class="lang-en" style="display:none;">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const deElements = document.querySelectorAll('.lang-de, .nav-de');
+            const enElements = document.querySelectorAll('.lang-en, .nav-en');
+            const btnDe = document.getElementById('btn-de');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'de') {
+                deElements.forEach(el => el.style.display = el.tagName === 'SPAN' || el.tagName === 'A' ? 'inline' : 'block');
+                enElements.forEach(el => el.style.display = 'none');
+                btnDe.classList.add('active');
+                btnEn.classList.remove('active');
+                document.documentElement.lang = 'de';
+            } else {
+                enElements.forEach(el => el.style.display = el.tagName === 'SPAN' || el.tagName === 'A' ? 'inline' : 'block');
+                deElements.forEach(el => el.style.display = 'none');
+                btnEn.classList.add('active');
+                btnDe.classList.remove('active');
+                document.documentElement.lang = 'en';
+            }
+        }
+        // Fix for specific layout displays like flex/inline elements
+        document.querySelectorAll('nav a').forEach(a => {
+            a.style.display = ''; // let CSS handle default flex behavior
+        });
+    </script>
 </body>
 </html>
